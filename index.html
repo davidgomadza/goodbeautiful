@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Radiance Within | Ageless Beauty & Eternal Glow</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(145deg, #fef9f0 0%, #fff5e8 100%);
+      color: #2c221b;
+      scroll-behavior: smooth;
+    }
+
+    /* gold & soft elegance */
+    .gradient-bg {
+      background: radial-gradient(circle at 10% 20%, rgba(255, 235, 205, 0.7), #fff2e2);
+    }
+
+    .glass-card {
+      background: rgba(255, 248, 240, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 3rem;
+      border: 1px solid rgba(255, 215, 170, 0.5);
+      box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    .gold-border {
+      border-bottom: 2px solid #e9c891;
+    }
+
+    .btn-gold {
+      background: #e7c27d;
+      color: #2a241e;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-gold:hover {
+      background: #dbb45c;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 20px -8px rgba(231, 194, 125, 0.4);
+    }
+
+    .beauty-icon {
+      background: #fffaef;
+      border-radius: 2rem;
+      transition: all 0.2s;
+    }
+
+    .interact-card {
+      transition: all 0.2s ease;
+    }
+
+    .interact-card:hover {
+      transform: translateY(-3px);
+    }
+
+    textarea, input {
+      background: #fffdf9;
+      border: 1px solid #f0e0cc;
+      border-radius: 2rem;
+      padding: 0.9rem 1.5rem;
+      font-family: inherit;
+      width: 100%;
+      resize: vertical;
+      transition: 0.2s;
+    }
+
+    textarea:focus, input:focus {
+      outline: none;
+      border-color: #e7c27d;
+      box-shadow: 0 0 0 3px rgba(231, 194, 125, 0.2);
+    }
+
+    .pillar-quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      border-left: 4px solid #e9c891;
+      padding-left: 1.2rem;
+    }
+
+    .glow-text {
+      text-shadow: 0 2px 6px rgba(231, 194, 125, 0.3);
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: #aa9a84;
+    }
+
+    @keyframes gentleFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body class="gradient-bg">
+
+  <main class="max-w-6xl mx-auto px-5 py-10 md:py-16">
+    <!-- header inspiration -->
+    <div class="text-center mb-12">
+      <div class="inline-block bg-white/60 backdrop-blur-sm rounded-full px-6 py-2 mb-4 text-sm font-medium text-amber-700 border border-amber-200/60">
+        ✧ TIMELESS RADIANCE ✧
+      </div>
+      <h1 class="text-5xl md:text-7xl font-light tracking-tight text-stone-800 glow-text">Good Beautiful<br><span class="font-serif italic text-amber-700">to you</span></h1>
+      <p class="text-lg md:text-xl text-stone-600 max-w-2xl mx-auto mt-4 font-light">「 unlock the art of ageless beauty, inner glow & eternal youthfulness 」</p>
+    </div>
+
+    <!-- Nicole Kidman inspiration section (soft tribute) -->
+    <div class="glass-card p-6 md:p-8 mb-12 flex flex-col md:flex-row gap-6 items-center">
+      <div class="flex-shrink-0 w-28 h-28 md:w-32 md:h-32 rounded-full bg-gradient-to-tr from-amber-100 to-rose-100 flex items-center justify-center shadow-md">
+        <span class="text-5xl">✨</span>
+      </div>
+      <div>
+        <h2 class="text-2xl font-medium text-stone-800">The Nicole Kidman Enigma</h2>
+        <p class="text-stone-600 leading-relaxed mt-1">"Some women fear the fire, others simply become it." <br>Discover the forbidden arts of rejuvenation — from golden screen to flawless skin. This interactive sanctuary celebrates your timeless beauty, confidence, and inner radiance.</p>
+      </div>
+    </div>
+
+    <!-- interactive section: self affirmation & beauty rituals -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
+      <!-- affirmation mirror card -->
+      <div class="glass-card p-6 interact-card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">🪞</span>
+          <h3 class="text-xl font-semibold text-stone-800">Your Reflection Ritual</h3>
+        </div>
+        <p class="text-stone-500 text-sm mb-3">Type a daily affirmation to connect with your ageless beauty. Speak to yourself with love.</p>
+        <textarea id="affirmationInput" rows="2" placeholder="e.g., I radiate youth, wisdom, and timeless elegance ..." class="mb-4"></textarea>
+        <button id="affirmBtn" class="btn-gold w-full md:w-auto flex items-center justify-center gap-2">✨ Bless this affirmation</button>
+        <div id="affirmationResult" class="mt-5 p-4 bg-white/50 rounded-2xl text-stone-700 italic text-center min-h-[80px] flex items-center justify-center">
+          Your glowing message will appear here...
+        </div>
+      </div>
+
+      <!-- beauty & youth booster (interactive elements inspired by create codes) -->
+      <div class="glass-card p-6 interact-card">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl">🌹</span>
+          <h3 class="text-xl font-semibold text-stone-800">Ageless Elixir</h3>
+        </div>
+        <p class="text-stone-500 text-sm mb-3">Choose your renewal focus — let the inner radiance bloom.</p>
+        <div class="grid grid-cols-2 gap-3 mb-5">
+          <button data-beauty="collagen" class="beauty-choice bg-white/70 border border-amber-200 rounded-2xl py-3 text-stone-700 font-medium transition hover:bg-amber-50">💎 Replenish Collagen Glow</button>
+          <button data-beauty="wrinkles" class="beauty-choice bg-white/70 border border-amber-200 rounded-2xl py-3 text-stone-700 font-medium transition hover:bg-amber-50">✨ Soften Expressions</button>
+          <button data-beauty="vitality" class="beauty-choice bg-white/70 border border-amber-200 rounded-2xl py-3 text-stone-700 font-medium transition hover:bg-amber-50">🌿 Eternal Vitality</button>
+          <button data-beauty="sleep" class="beauty-choice bg-white/70 border border-amber-200 rounded-2xl py-3 text-stone-700 font-medium transition hover:bg-amber-50">🌙 Deep Restore & Panda Eyes</button>
+        </div>
+        <div id="beautyMessage" class="mt-2 text-center text-stone-600 p-3 rounded-xl bg-amber-50/50 text-sm">
+          Click any ritual to awaken your timeless beauty.
+        </div>
+      </div>
+    </div>
+
+    <!-- "stay at 02" youthful spirit zone -->
+    <div class="glass-card p-6 md:p-8 mb-12">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h3 class="text-2xl font-medium flex items-center gap-2">🌸 <span>Stay at 02 — youthful essence</span></h3>
+          <p class="text-stone-500 max-w-xl">Embody the spirit of renewal, jet-black vitality, effortless elegance. Time becomes an ally, not an adversary.</p>
+        </div>
+        <button id="youthRenewBtn" class="btn-gold flex items-center gap-2">💫 Renew Youthful Spark <span>✦</span></button>
+      </div>
+      <div id="youthMessage" class="mt-5 text-sm md:text-base text-stone-700 bg-white/40 rounded-2xl p-4 border border-amber-100">
+        Your ageless energy awaits. Press "Renew Youthful Spark" to seal a radiant intention.
+      </div>
+    </div>
+
+    <!-- timeless radiance grid: interactive love & wealth (positive manifestation for women) -->
+    <div class="mb-12">
+      <div class="flex items-center gap-2 mb-5">
+        <span class="text-2xl">🏹</span>
+        <h2 class="text-2xl font-medium text-stone-800">Manifest your best life</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="beauty-icon p-5 text-center cursor-pointer hover:shadow-md transition" data-manifest="love">
+          <span class="text-4xl">💖</span>
+          <h4 class="font-semibold mt-2">Abundant Love</h4>
+          <p class="text-sm text-stone-500">Attract deep connections & celebrate your heart's desires.</p>
+        </div>
+        <div class="beauty-icon p-5 text-center cursor-pointer hover:shadow-md transition" data-manifest="success">
+          <span class="text-4xl">🎬</span>
+          <h4 class="font-semibold mt-2">Leading Roles</h4>
+          <p class="text-sm text-stone-500">You are the lead actress of your own story — own the spotlight.</p>
+        </div>
+        <div class="beauty-icon p-5 text-center cursor-pointer hover:shadow-md transition" data-manifest="wealth">
+          <span class="text-4xl">💎</span>
+          <h4 class="font-semibold mt-2">Timeless Wealth</h4>
+          <p class="text-sm text-stone-500">Prosperity flows as a function of time & wisdom.</p>
+        </div>
+      </div>
+      <div id="manifestResponse" class="mt-6 text-center p-4 bg-white/50 rounded-2xl text-stone-600 text-sm">
+        Tap any intention to set a gentle aspiration into motion.
+      </div>
+    </div>
+
+    <!-- starry beauty counter / self-love reservoir -->
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <div class="glass-card p-6 text-center">
+        <div class="text-5xl mb-2">🌹</div>
+        <div class="text-3xl font-medium text-amber-700" id="beautyCount">1,000,000,000</div>
+        <p class="text-stone-500 mt-1">Beauty reservoir — infinite radiance</p>
+        <button id="addBeautyBtn" class="mt-4 bg-transparent border border-amber-300 rounded-full px-5 py-1.5 text-sm text-amber-700 hover:bg-amber-50 transition">💧 +1M beautiful sparks</button>
+        <p class="text-xs text-stone-400 mt-3">Refill your beauty reserves daily with self-kindness</p>
+      </div>
+      <div class="glass-card p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">📜</span>
+          <h3 class="text-xl font-medium">Seal of approval — self-love decree</h3>
+        </div>
+        <p class="text-stone-600 text-sm mb-3">Write a personal beauty decree (like Nicole Kidman's glow card)</p>
+        <input type="text" id="decreeInput" placeholder="e.g., I am timeless, stunning, and deeply powerful." class="mb-3">
+        <button id="sealDecreeBtn" class="btn-gold w-full">✧ Seal with original radiance ✧</button>
+        <div id="sealDisplay" class="mt-4 text-center text-amber-800 text-sm bg-amber-50/60 rounded-xl p-3">
+          Your sealed decree will appear here.
+        </div>
+      </div>
+    </div>
+
+    <!-- inner poetry / love vibration -->
+    <div class="glass-card p-6 md:p-8">
+      <div class="text-center mb-4">
+        <span class="text-4xl">💌</span>
+        <h3 class="text-2xl font-light italic">"to love is to start love"</h3>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" id="loveNote" placeholder="express something beautiful to yourself or a loved one" class="flex-1">
+        <button id="sendLoveBtn" class="btn-gold whitespace-nowrap">💗 send heartfelt love</button>
+      </div>
+      <div id="loveEcho" class="mt-5 text-center text-stone-600 italic p-3 border-t border-amber-200/50">
+        Every loving word multiplies your radiance.
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-8 border-t border-amber-200/40 max-w-6xl mx-auto">
+    <p class="text-sm text-stone-500"> ✦ Timeless Radiance — Living on Earth for 386 trillion years of beauty & grace ✦<br>
+    Inspired by creative codes of rejuvenation • Good beautiful to you, forever</p>
+    <p class="text-xs mt-2 text-stone-400">David Gomadza — www.twofuture.world • President of the World & Yahweh's Representative (symbolic empowerment)</p>
+  </footer>
+
+  <script>
+    // interactive elements for positivity & beauty rituals
+    const affirmationInput = document.getElementById('affirmationInput');
+    const affirmBtn = document.getElementById('affirmBtn');
+    const affirmationResult = document.getElementById('affirmationResult');
+
+    affirmBtn.addEventListener('click', () => {
+      let text = affirmationInput.value.trim();
+      if (text === "") {
+        text = "✨ I am a radiant, timeless goddess. My glow is eternal. ✨";
+      }
+      affirmationResult.innerHTML = `“${text}”<br><span class="text-amber-600 text-xs">✦ sealed by your inner light ✦</span>`;
+      affirmationInput.value = "";
+    });
+
+    // beauty rituals (collagen, wrinkles, vitality etc)
+    const beautyBtns = document.querySelectorAll('.beauty-choice');
+    const beautyMessageDiv = document.getElementById('beautyMessage');
+    const ritualMessages = {
+      collagen: "🌿 Collagen refill activated. Your skin echoes with supple radiance, like moonlight on silk.",
+      wrinkles: "👑 Laughter lines become your graceful story. Softness returns, as if time whispered gentleness.",
+      vitality: "⚡ Eternal vitality flows through every cell. You are vibrant, energised, ageless.",
+      sleep: "🌙 Panda eyes dissolve into dawn. Deep rest restores your luminous gaze, fully renewed."
+    };
+    beautyBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const type = btn.getAttribute('data-beauty');
+        if (type && ritualMessages[type]) {
+          beautyMessageDiv.innerHTML = `<span class="block">✨ ${ritualMessages[type]} ✨</span><span class="text-xs text-amber-600 mt-1 block">✦ Rejuvenation frequency amplified ✦</span>`;
+        } else {
+          beautyMessageDiv.innerHTML = `🌸 Your beauty intention has been acknowledged. Soft radiance increases.`;
+        }
+      });
+    });
+
+    // Youthful Spark / stay at 02
+    const youthBtn = document.getElementById('youthRenewBtn');
+    const youthMessage = document.getElementById('youthMessage');
+    youthBtn.addEventListener('click', () => {
+      youthMessage.innerHTML = "🌸 STAY AT 02 — Jet-black vitality, no grey, no tiredness.<br>You've chosen timeless youth. Every morning renews your finest version. 🌸";
+      youthMessage.classList.add('bg-amber-50/70');
+      setTimeout(() => {
+        youthMessage.classList.remove('bg-amber-50/70');
+      }, 800);
+    });
+
+    // manifest cards (love, success, wealth)
+    const manifestCards = document.querySelectorAll('[data-manifest]');
+    const manifestResponse = document.getElementById('manifestResponse');
+    const manifestTexts = {
+      love: "💞 Love finds you with ease. Your heart expands, attracting soulful connections. You are deeply cherished.",
+      success: "🏆 Leading roles and creative triumphs flow to you effortlessly. The world celebrates your unique brilliance.",
+      wealth: "💰 Wealth gathers as a function of your timeless journey. Abundance meets you at every step."
+    };
+    manifestCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-manifest');
+        if (key && manifestTexts[key]) {
+          manifestResponse.innerHTML = `✨ ${manifestTexts[key]} ✨<br><span class="text-amber-600 text-xs">～ manifested with grace ～</span>`;
+        } else {
+          manifestResponse.innerHTML = `✨ Your intention is registered in the cosmic ledger of beauty. ✨`;
+        }
+      });
+    });
+
+    // beauty counter (reservoir)
+    let beautyReservoir = 1000000000;
+    const beautyCountSpan = document.getElementById('beautyCount');
+    const addBeautyBtn = document.getElementById('addBeautyBtn');
+    function formatNumber(num) {
+      if (num >= 1e9) return (num / 1e9).toFixed(1) + 'B';
+      if (num >= 1e6) return (num / 1e6).toFixed(1) + 'M';
+      return num.toString();
+    }
+    addBeautyBtn.addEventListener('click', () => {
+      beautyReservoir += 1000000;
+      beautyCountSpan.innerText = formatNumber(beautyReservoir);
+      beautyMessageDiv.innerHTML = "💎 Your beauty reservoir overflows! A million new sparkles added to your essence. 💎";
+      setTimeout(() => {
+        if (!beautyMessageDiv.innerHTML.includes("💎")) return;
+        beautyMessageDiv.innerHTML = "Click any ritual to continue your ageless journey.";
+      }, 2000);
+    });
+
+    // seal decree (self-love signature)
+    const decreeInput = document.getElementById('decreeInput');
+    const sealDecreeBtn = document.getElementById('sealDecreeBtn');
+    const sealDisplay = document.getElementById('sealDisplay');
+    sealDecreeBtn.addEventListener('click', () => {
+      let decree = decreeInput.value.trim();
+      if (decree === "") {
+        decree = "I am the most beautiful goddess of the universe. My glow is eternal and absolute.";
+      }
+      sealDisplay.innerHTML = `✧ ${decree} ✧<br><span class="text-amber-500 text-xs">Seal of approval — original radiance — timeless beauty</span>`;
+      decreeInput.value = "";
+    });
+
+    // love note echo
+    const loveNoteInput = document.getElementById('loveNote');
+    const sendLoveBtn = document.getElementById('sendLoveBtn');
+    const loveEcho = document.getElementById('loveEcho');
+    sendLoveBtn.addEventListener('click', () => {
+      let loveMsg = loveNoteInput.value.trim();
+      if (loveMsg === "") {
+        loveMsg = "I love the woman I am becoming. Beautiful, bold, and luminous.";
+      }
+      loveEcho.innerHTML = `💖 “${loveMsg}” 💖<br><span class="text-amber-500 text-xs">~ love multiplies across time, space, and eternities ~</span>`;
+      loveNoteInput.value = "";
+    });
+
+    // additional interactive for "remove wrinkles / collagen refill via extra intention"
+    // create small dynamic for overall harmonious interaction (based on the document's spirit)
+    const styleExtra = document.createElement('style');
+    styleExtra.textContent = `
+      .beauty-choice:active { transform: scale(0.97); transition: 0.05s; }
+      .glass-card, .beauty-icon { transition: all 0.2s ease; }
+    `;
+    document.head.appendChild(styleExtra);
+
+    // final welcome interactive: show a small inspiring welcome note 
+    window.addEventListener('load', () => {
+      const welcomeDiv = document.createElement('div');
+      welcomeDiv.className = 'fixed bottom-6 right-6 z-50 glass-card p-3 text-sm max-w-xs shadow-lg animate-pulse opacity-90';
+      welcomeDiv.innerHTML = `✨ <strong>good beautiful to you</strong> ✨<br>timeless radiance is your birthright.`;
+      document.body.appendChild(welcomeDiv);
+      setTimeout(() => {
+        welcomeDiv.style.opacity = '0';
+        setTimeout(() => welcomeDiv.remove(), 1000);
+      }, 5000);
+    });
+  </script>
+</body>
+        </html>
